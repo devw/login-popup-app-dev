@@ -1,13 +1,12 @@
 export default async (req, res) => {
     const { SHOP, AWS } = process.env;
-    const endpoint = `${AWS}/ddb/${SHOP}`;
     const body = {
         ...JSON.parse(req.body),
         paramName: "subscription",
         paramValue: "yearly",
     };
 
-    const result = await fetch(endpoint, {
+    const result = await fetch(`${AWS}/ddb/${SHOP}`, {
         method: "PUT",
         body: JSON.stringify(body),
     });
