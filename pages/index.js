@@ -25,9 +25,10 @@ export default class HomePage extends React.Component {
 
     render = () => (
         <div>
+            <h2>Popup de Login Backend</h2>
             <button onClick={onInstall}>install</button>
-            <button onClick={onUninstall}>uninstall</button>
             <button onClick={onUpdateContract}>updateContract</button>
+            <button onClick={onUninstall}>uninstall</button>
         </div>
     );
 }
