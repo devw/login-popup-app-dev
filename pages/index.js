@@ -2,7 +2,7 @@ import React from "react";
 
 const onInstall = async (e) => {
     e.preventDefault();
-    fetch("./api/install", { method: "POST", body: JSON.stringify({ a: 2 }) });
+    fetch("./api/install", { method: "POST", body: JSON.stringify({}) });
 };
 
 const onUninstall = async (e) => {
@@ -16,7 +16,7 @@ const onUpdateContract = async (e) => {
     e.preventDefault();
     fetch("./api/update-contract", {
         method: "PUT",
-        body: JSON.stringify({ a: 2 }),
+        body: JSON.stringify({}),
     });
 };
 
